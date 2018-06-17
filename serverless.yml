@@ -1,0 +1,15 @@
+service: aws-lambda-old-resource-detector
+
+provider:
+  name: aws
+  runtime: python3.6
+
+functions:
+  detector:
+    handler: handler.detector
+    memorySize: 128
+    timeout: 30
+
+custom:
+    environment:
+      DURATION_DAYS: 7
